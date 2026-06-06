@@ -2,7 +2,7 @@
 #
 # try:
 #     conn = sqlite3.connect("tasks.db")
-#     print("✅ Подключение к SQLite успешно!")
+#     print("Подключение к SQLite успешно!")
 #
 #     cursor = conn.cursor()
 #     cursor.execute("SELECT sqlite_version();")
@@ -12,7 +12,7 @@
 #     conn.close()
 #
 # except Exception as e:
-#     print(f"❌ Ошибка: {e}")
+#     print(f"Ошибка: {e}")
 
 # import psycopg2
 # import sys
@@ -27,7 +27,7 @@
 #         password="mysecretpassword",
 #         connect_timeout=5
 #     )
-#     print("✅ Подключение к PostgreSQL успешно!")
+#     print("Подключение к PostgreSQL успешно!")
 #
 #     cur = conn.cursor()
 #     cur.execute("SELECT version();")
@@ -38,7 +38,7 @@
 #     conn.close()
 #
 # except Exception as e:
-#     print(f"❌ Ошибка: {type(e).__name__}: {e}")
+#     print(f"Ошибка: {type(e).__name__}: {e}")
 
 
 
@@ -61,7 +61,7 @@ def get_connection():
 if __name__ == "__main__":
     try:
         conn = get_connection()
-        print("✅ Подключение к PostgreSQL успешно!")
+        print("Подключение к PostgreSQL успешно!")
         conn.close()
     except Exception as e:
-        print(f"❌ Ошибка: {e}")
+        print(f"Ошибка: {e}")
