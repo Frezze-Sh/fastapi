@@ -251,7 +251,6 @@ def get_all_tasks(category_id: Optional[int] = None):
         for t in tasks
     ]
 
-
 # Создать новую задачу
 @app.post("/tasks", response_model=TaskResponse)
 def create_task(task: TaskCreate):
