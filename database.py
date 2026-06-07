@@ -43,8 +43,7 @@
 
 
 import psycopg2
-
-# Параметры подключения (твой рабочий вариант)
+from psycopg2.extras import RealDictCursor
 DB_CONFIG = {
     "host": "127.0.0.1",
     "port": 5433,
@@ -57,11 +56,8 @@ def get_connection():
     """Возвращает соединение с базой данных"""
     return psycopg2.connect(**DB_CONFIG)
 
-# Проверка подключения (опционально)
-if __name__ == "__main__":
-    try:
-        conn = get_connection()
-        print("Подключение к PostgreSQL успешно!")
-        conn.close()
-    except Exception as e:
-        print(f"Ошибка: {e}")
+
+def get_cursor():
+    """Возвращает курсор с RealDictCursor (результаты в виде словарей)"""
+    conn = get_connection()
+    return conn, conn.cursor(cursor_factory=RealDictCursor)
