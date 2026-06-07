@@ -421,4 +421,3 @@ def mark_done(task_id: int):
         "updated_at": updated[8],
         "estimated_minutes": updated[9]
     }
-
