@@ -61,3 +61,6 @@ Thumbs.db
 # Папки с данными
 data/
 db/
+
+.postman/
+postman/
