@@ -11,7 +11,7 @@ Task Management REST API
 - База данных: PostgreSQL
 - Тестирование: Postman
 - Контейнеризация: Docker
-- Допольнительно: Pydantic(Валидация), Psycopg2 (работа с БД, нативные sql запросы)
+- Допольнительно: Pydantic (Валидация), Psycopg2 (работа с БД, нативные sql запросы)
 
 <br>
 
