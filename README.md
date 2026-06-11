@@ -106,3 +106,4 @@ Users:
 
 Categories:
 - GET /categories - список всех категорий
+
