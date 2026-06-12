@@ -1,5 +1,8 @@
 # Task Manager REST API
 
+![Tests](https://github.com/Frezze-Sh/fastapi-task-manager/actions/workflows/tests.yml/badge.svg)
+[![Docker](https://img.shields.io/badge/docker-ready-blue)](https://www.docker.com/)
+
 Масштабируемый RESTful API сервис для управления задачами с системой пользователей, категорий и приоритезации.
 
 <br>
