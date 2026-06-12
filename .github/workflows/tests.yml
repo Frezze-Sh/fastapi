@@ -18,7 +18,7 @@ jobs:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: mysecretpassword
         ports:
-          - 5433:5432  # Пробрасываем порт 5432 контейнера на 5433 хоста
+          - 5433:5432
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
@@ -37,6 +37,14 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+
+    - name: Initialize database
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y postgresql-client
+        PGPASSWORD=mysecretpassword psql -h localhost -p 5433 -U postgres -d taskdb -f init.sql
+      env:
+        PGPASSWORD: mysecretpassword
 
     - name: Run tests
       run: |
